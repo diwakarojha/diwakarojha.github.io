@@ -1,14 +1,64 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
+<html>
+<head>
+  <link rel="stylesheet" href='style/style.css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <!--Header image-->
+      <div class="row bg-primary h-25 border">
+        <div class="col">
+              <p class="text-center">Diwakar Ojha Profile</p>
+        </div>
+      </div>
 
-<div class="card">
-  <img src="profile.jpg" alt="Diwakar" style="width:100%">
-  <h1>Diwakar Ojha</h1>
-  <p class="title">Machine Learning Engineer</p>
-  <p>Accenture</p>
-  <a href="pages/test.html"><i class="fa fa-dribbble"></i></a>
-  <a href="#"><i class="fa fa-twitter"></i></a>
-  <a href="#"><i class="fa fa-linkedin"></i></a>
-  <a href="#"><i class="fa fa-facebook"></i></a>
-  <p><button>Contact</button></p>
-</div>
+      <!--Navigation-->
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Profile</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-link active" href="#">ABOUT ME <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">RESUME</a>
+                <a class="nav-link" href="#">PORTFOLIO</a>
+                <a class="nav-link" href="#">BLOG</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!--Profile and body-->
+      <div class=row>
+        <!--left side -->
+        <div class=col-3>
+          <div class="card" style="width: auto;">
+            <img src="images/profile.jpg" class="card-img-top" alt="Diwakar Ojha">
+            <div class="card-body">
+              <h5 class="card-title text-center">Diwakar Ojha</h5>
+              <h6 class="card-subtitle mb-2 text-muted text-center">Machine Learning Engineer</h6>
+              <p class="card-text text-center">Pune Maharastra</p>
+            </div>
+          </div>
+        </div>
+        <!--Right side -->
+        <div class="col-9">
+          <div class="text-center">
+          <h1 class="">Diwakar Ojha</h1><br><br>
+          <h2> Machine Learning engineer</h2>
+        </div>
+        </div>
+
+
+      </div>
+
+  </div>
+</body>
+</html>
