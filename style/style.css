@@ -6,3 +6,15 @@
 .zcontainer{
   border: 2em solid #dddddd;
 }
+.zlcol-border{
+	border-top:none !important;
+	border-right:3px dotted #dee2e6;
+}
+.zrcol-border{
+	border-top:none !important;
+}
+.zul{
+	list-style-position:inside;
+	text-align:center;
+	/*margin-left:30%*/
+}
