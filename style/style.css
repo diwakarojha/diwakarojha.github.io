@@ -18,3 +18,21 @@
 	text-align:center;
 	/*margin-left:30%*/
 }
+
+.zblog{
+	margin-top:2%;
+	margin-bottom:1%;
+}
+
+.zproject{
+	margin-bottom:20px;
+}
+.zproject h3::before{
+  	background: #ffd42d;
+    content: "";
+    height: 2px;
+    left: 0%;
+    position: absolute;
+    width: 100%;
+    margin-top:-10px;
+}

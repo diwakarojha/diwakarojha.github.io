@@ -1,0 +1,86 @@
+<html>
+<head>
+  <link rel="stylesheet" href='style/style.css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Diwakar Ojha</title>
+</head>
+<body>
+  <div class="container-fluid" style="padding:0px">
+    <div class="zcontainer">
+    <!--Header image-->
+      <div class="row h-25 border m-0" style="background:#999999">
+        <div class="col">
+              <h1 class="text-center">Welcome</h1>
+        </div>
+      </div>
+
+      <!--Navigation-->
+      <div class="row sticky-top m-0">
+        <div class="col">
+          <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="#">Diwakar Ojha</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-link" href="../index.html">ABOUT ME</a>
+                <a class="nav-link" href="../index.html#resume">RESUME</a>
+                <a class="nav-link" href="../project.html">PROJECT</a>
+                <a class="nav-link active" href="../blog.html">BLOG <span class="sr-only">(current)</span></a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!--Blog body-->
+      <div class="row m-0">
+      	<div class="col-12">
+      		<h1 class="card-title">Machine Learning in PeopleSoft</h1>
+      		<p>Reading Time: 1 minute</p>
+			<p>In this post, we will briefly discuss about how to deploy Machine Learning models in PeopleSoft Production.</p>
+			
+			<p>So, to create and deploy a successful ML model in Production, we need to follow below basic steps:
+			<ol>
+			 	<li>Data Gathering.</li>
+			 	<li>Data Preparation.</li>
+			 	<li>Model Selection and Training.</li>
+			 	<li>Model Deployment to Production.</li>
+			 	<li>Continuous Model Evaluation and Tuning.</li>
+			</ol></p>
+			<p>Since, I work for a PeopleSoft Finance client. The whole journey till deployment was stuck at first step. Since, Data Security is the main concern with financial data, It becomes difficult to train and deploy an ML Model.</p>
+			
+			<p>But now with recent(April 2020) release of PeopleTools 8.58.03, Oracle has provided a way(Elastic Search Index) to connect PeopleSoft data with their Oracle Cloud Data Science Platform*. Which solves Data gathering issue with PeopleSoft, without much worrying about data Security.</p>
+			
+			<p>And with Oracle AutoML libraries (ADS-Accelerated Data Science) available on OCI Data Science platform, ML model training and testing becomes easier.</p>
+			
+			<p>Once a ML Model is trained and gives good enough performance on test data, we can download the model using Pickle/ADS and deploy it as RESTful API on Oracle Cloud.</p>
+			
+			<p>Here one more new and enhanced feature of PeopleTools 8.58 makes life more easier. Upgraded PeopleSoft Integration Broker(IB) supports JSON messaging along with RESTful APIs.</p>
+			
+			<p>So, once ML model is deployed on Oracle Cloud as REST API, we can call this model from PeopleSoft using IB and get the real time prediction from PeopleSoft environments.</p>
+			
+			Below is the graphical summary of above explanation:<br>
+			
+			<img class="img-fluid w-50" src="../images/blog_images/PeopleSoft_ML_OCI.png">
+			
+			<br>
+			
+			<p><strong>Oracle Cloud Data Science Platform:</strong> Data Science platform being provided by Oracle Cloud. Along with Python Jupyter Notebook and Open Source ML libraries, you also get access to Oracle AutoML(ADS) libraries.</p>
+			
+			<p><strong>Elastic Search Index:</strong> Open Source analytical engine. It lets you store, search and analyze large amount of data in real time.  This has been integrated with PeopleSoft search Framework in new PeopleTools release.</p>
+			
+			<p>For more details related to this new PeopleTools release and ML compatibility, you can also look at the <a href="https://blogs.oracle.com/peopletools/introduction-to-machine-learning-with-peopletools-858">blog post</a> from Oracle.</p>
+      		
+      	</div>
+      </div>
+      
+      
+      </div>
+    </div>
+</body>
+</html>
