@@ -240,7 +240,7 @@ async function send(message) {
         $("#userInput").prop("disabled", false);
 
         // if you want the bot to start the conversation after restart
-        // customActionTrigger();
+        customActionTrigger();
         return;
       }
       setBotResponse(botResponse);
@@ -304,31 +304,34 @@ function actionTrigger() {
  */
 // eslint-disable-next-line no-unused-vars
 function customActionTrigger() {
-  $.ajax({
-    url: "http://localhost:5055/webhook/",
-    type: "POST",
-    contentType: "application/json",
-    data: JSON.stringify({
-      next_action: action_name,
-      tracker: {
-        sender_id,
-      },
-    }),
-    success(botResponse, status) {
-      console.log("Response from Rasa: ", botResponse, "\nStatus: ", status);
+  // $.ajax({
+  //   url: rasa_server_url,
+  //   type: "POST",
+  //   contentType: "application/json",
+  //   data: JSON.stringify({
+  //     next_action: action_name,
+  //     tracker: {
+  //       sender_id,
+  //     },
+  //   }),
+  //   success(botResponse, status) {
+  //     console.log("Response from Rasa: ", botResponse, "\nStatus: ", status);
 
-      if (Object.hasOwnProperty.call(botResponse, "responses")) {
-        setBotResponse(botResponse.responses);
-      }
-      $("#userInput").prop("disabled", false);
-    },
-    error(xhr, textStatus) {
-      // if there is no response from rasa server
-      setBotResponse("");
-      console.log("Error from bot end: ", textStatus);
-      $("#userInput").prop("disabled", false);
-    },
-  });
+  //     if (Object.hasOwnProperty.call(botResponse, "responses")) {
+  //       setBotResponse(botResponse.responses);
+  //     }
+  //     $("#userInput").prop("disabled", false);
+  //   },
+  //   error(xhr, textStatus) {
+  //     // if there is no response from rasa server
+  //     setBotResponse("");
+  //     console.log("Error from bot end: ", textStatus);
+  //     $("#userInput").prop("disabled", false);
+  //   },
+  // });
+  send(start_chat_utterance)
+  $("#userInput").prop("disabled", false);
+  // restartConversation();
 }
 
 /**
