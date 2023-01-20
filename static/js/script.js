@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   instancesTap.open();
   setTimeout(() => {
     instancesTap.close();
-  }, 4000);
+  }, 2000);
 });
 
 /* import components */
@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
     $("div").removeClass("tap-target-origin");
 
     // Open the chatbot immediately
-    $("#profile_div").click();
+    // $("#profile_div").click();
 
     // drop down menu for close, restart conversation & clear the chats.
     $(".dropdown-trigger").dropdown();

@@ -39,6 +39,8 @@ function getBotResponse(text) {
  */
 function setBotResponse(response) {
   // renders bot response after 500 milliseconds
+  // console.log("Logging length in botresponse");
+  // console.log(response.length);
   setTimeout(() => {
     hideBotTyping();
     if (response.length < 1) {
@@ -51,8 +53,11 @@ function setBotResponse(response) {
       scrollToBottomOfResults();
     } else {
       // if we get response from Rasa
+      console.log(response.length)
       for (let i = 0; i < response.length; i += 1) {
         // check if the response contains "text"
+        console.log("Logging response in loop");
+        console.log(response[i]);
         if (Object.hasOwnProperty.call(response[i], "text")) {
           if (response[i].text != null) {
             // convert the text to mardown format using showdown.js(https://github.com/showdownjs/showdown);
@@ -135,20 +140,20 @@ function setBotResponse(response) {
             // check if the custom payload type is "quickReplies"
             const quickRepliesData = response[i].custom.data;
             showQuickReplies(quickRepliesData);
-            return;
+            // return;
           }
 
           // check if the custom payload type is "pdf_attachment"
           if (payload === "pdf_attachment") {
             renderPdfAttachment(response[i]);
-            return;
+            // return;
           }
 
           // check if the custom payload type is "dropDown"
           if (payload === "dropDown") {
             const dropDownData = response[i].custom.data;
             renderDropDwon(dropDownData);
-            return;
+            // return;
           }
 
           // check if the custom payload type is "location"
@@ -156,14 +161,14 @@ function setBotResponse(response) {
             $("#userInput").prop("disabled", true);
             getLocation();
             scrollToBottomOfResults();
-            return;
+            // return;
           }
 
           // check if the custom payload type is "cardsCarousel"
           if (payload === "cardsCarousel") {
             const restaurantsData = response[i].custom.data;
             showCardsCarousel(restaurantsData);
-            return;
+            // return;
           }
 
           // check if the custom payload type is "chart"
@@ -204,7 +209,7 @@ function setBotResponse(response) {
                 displayLegend
               );
             });
-            return;
+            // return;
           }
 
           // check of the custom payload type is "collapsible"
