@@ -1,7 +1,7 @@
 function loadBot() {
   const content = '<!--Import Google Icon Font-->\
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />\
-     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" />\
+      <!-- <link rel="preconnect" href="https://fonts.gstatic.com" />\
      <!--Import Font Awesome Icon Font-->\
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous"/>\
      <!--Import materialize.css-->\
@@ -9,7 +9,7 @@ function loadBot() {
      <!--Main css-->\
      <link rel="stylesheet" type="text/css" href="static/css/style.css" />\
      <meta name="viewport" content="width=device-width, initial-scale=1" />\
- <div class="chat_container">\
+      <div class="chat_container">\
        <!-- Modal for rendering the charts, declare this if you want to render charts, \
           else you remove the modal -->\
        <div id="modal1" class="modal">\
@@ -60,19 +60,35 @@ function loadBot() {
            </p>\
          </div>\
        </div>\
-     </div>\
-      <!--JavaScript at end of body for optimized loading-->\
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>\
-     <script type="text/javascript" src="static/js/lib/materialize.min.js" ></script>\
-     <script src="static/js/lib/uuid.min.js"></script>\
-     <!--Main Script -->\
-     <script type="text/javascript" src="static/js/script.js"></script>\
-     <!--Chart.js Script -->\
-     <script type="text/javascript" src="static/js/lib/chart.min.js"></script>\
-     <script type="text/javascript" src="static/js/lib/showdown.min.js"></script>'
-
+     </div>'
+  
   let chatBotDiv = document.createElement('div')
   chatBotDiv.innerHTML = content
+
+  let jqueryScript = document.createElement('script')
+  jqueryScript.src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+  chatBotDiv.appendChild(jqueryScript)
+
+  let materializeScript = document.createElement('script')
+  materializeScript.src="static/js/lib/materialize.min.js"
+  chatBotDiv.appendChild(materializeScript)
+
+  let uuidMinScript = document.createElement('script')
+  uuidMinScript.src="static/js/lib/uuid.min.js"
+  chatBotDiv.appendChild(uuidMinScript)
+
+  let scScript = document.createElement('script')
+  scScript.src="static/js/script.js"
+  chatBotDiv.appendChild(scScript)
+
+  let chartMinScript = document.createElement('script')
+  chartMinScript.src="static/js/lib/chart.min.js"
+  chatBotDiv.appendChild(chartMinScript)
+
+  let showDownScript = document.createElement('script')
+  showDownScript.src="static/js/lib/showdown.min.js"
+  chatBotDiv.appendChild(showDownScript)
+
   document.getElementsByTagName('body')[0].appendChild(chatBotDiv)
 }
 
