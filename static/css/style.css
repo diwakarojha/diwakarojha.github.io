@@ -211,6 +211,15 @@ blockquote {
   cursor: pointer;
 }
 
+/* css for Close menu of the bot-Added */
+.close-trigger {
+  cursor: pointer;
+  color: white;
+  margin-right: 5px;
+  float: right;
+  margin-top: 3%;
+}
+
 /* css for dropdown menu of the bot */
 
 #close,

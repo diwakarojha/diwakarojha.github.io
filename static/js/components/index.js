@@ -7,7 +7,7 @@ function include(file) {
     document.getElementsByTagName('head').item(0).appendChild(script);
 }
 
-/* include all the components js file */
+/* include all the Chat components js file */
 
 include('./static/js/components/chat.js');
 include('./static/js/constants.js');
@@ -20,3 +20,11 @@ include('./static/js/components/location.js');
 include('./static/js/components/pdfAttachment.js');
 include('./static/js/components/quickReplies.js');
 include('./static/js/components/suggestionButtons.js');
+
+
+/* include all lib js file */
+include('./static/js/lib/materialize.min.js');
+include('./static/js/lib/uuid.min.js');
+include('./static/js/lib/chart.min.js');
+include('./static/js/lib/chart.min.js');
+include('./static/js/lib/showdown.min.js');

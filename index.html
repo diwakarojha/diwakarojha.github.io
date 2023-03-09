@@ -200,16 +200,16 @@
 
       </div>
 	  </div>
-	  
+	  <!--Chat bot code starts here -->
 	   <!--Import Google Icon Font-->
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> 
      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
      <link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet"/>
      <link rel="preconnect" href="https://fonts.gstatic.com" />
      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"/>
      <link rel="preconnect" href="https://fonts.gstatic.com" />
-     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"/>
+     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"/> -->
      <!--Import Font Awesome Icon Font-->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous"/>
      <!--Import materialize.css-->
@@ -217,7 +217,7 @@
      <!--Main css-->
      <link rel="stylesheet" type="text/css" href="static/css/style.css" />
      <meta name="viewport" content="width=device-width, initial-scale=1" />
- <div class="container">
+ <div class="chat_container">
        <!-- Modal for rendering the charts, declare this if you want to render charts, 
           else you remove the modal -->
        <div id="modal1" class="modal">
@@ -229,16 +229,22 @@
          <div class="chat_header">
            <!--Add the name of the bot here -->
            <span class="chat_header_title">Shardeen IT Solutions</span>
-           <span class="dropdown-trigger" href="#" data-target="dropdown1">
-             <i class="material-icons"> more_vert </i>
+           
+           <span class="close-trigger" href="#" id="close">
+            <i class="material-icons"> close </i>
            </span>
+
+
+           <!-- <span class="dropdown-trigger" href="#" data-target="dropdown1">
+             <i class="material-icons"> more_vert </i>
+           </span> -->
  
            <!-- Dropdown menu-->
-           <ul id="dropdown1" class="dropdown-content">
+           <!-- <ul id="dropdown1" class="dropdown-content">
              <li><a href="#" id="clear">Clear</a></li>
              <li><a href="#" id="restart">Restart</a></li>
              <li><a href="#" id="close">Close</a></li>
-           </ul>
+           </ul> -->
          </div>
  
          <!--Chatbot contents goes here -->
