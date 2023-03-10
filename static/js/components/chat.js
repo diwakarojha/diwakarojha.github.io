@@ -132,8 +132,9 @@ function setBotResponse(response) {
             if (response[i].attachment.type === "video") {
               // check if the attachment type is "video"
               const video_url = response[i].attachment.payload.src;
-
-              const BotResponse = `<div class="video-container"> <iframe src="https://diwakarojha.github.io"+"${video_url}" frameborder="0" allowfullscreen></iframe> </div>`;
+              let vid_url="https://diwakarojha.github.io/"+video_url
+              console.log(vid_url)
+              const BotResponse = `<div class="video-container"> <iframe src="${vid_url}" frameborder="0" allowfullscreen></iframe> </div>`;
               $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
             }
           }
