@@ -70,23 +70,23 @@ function loadBot() {
   chatBotDiv.appendChild(jqueryScript)
 
   let materializeScript = document.createElement('script')
-  materializeScript.src="static/js/lib/materialize.min.js"
+  materializeScript.src="./static/js/lib/materialize.min.js"
   chatBotDiv.appendChild(materializeScript)
 
   let uuidMinScript = document.createElement('script')
-  uuidMinScript.src="static/js/lib/uuid.min.js"
+  uuidMinScript.src="./static/js/lib/uuid.min.js"
   chatBotDiv.appendChild(uuidMinScript)
 
   let scScript = document.createElement('script')
-  scScript.src="static/js/script.js"
+  scScript.src="./static/js/script.js"
   chatBotDiv.appendChild(scScript)
 
   let chartMinScript = document.createElement('script')
-  chartMinScript.src="static/js/lib/chart.min.js"
+  chartMinScript.src="./static/js/lib/chart.min.js"
   chatBotDiv.appendChild(chartMinScript)
 
   let showDownScript = document.createElement('script')
-  showDownScript.src="static/js/lib/showdown.min.js"
+  showDownScript.src="./static/js/lib/showdown.min.js"
   chatBotDiv.appendChild(showDownScript)
 
   document.getElementsByTagName('body')[0].appendChild(chatBotDiv)
