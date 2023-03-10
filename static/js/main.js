@@ -61,7 +61,7 @@ function loadBot() {
          </div>\
        </div>\
      </div>'
-  let rootPath="https://github.com/diwakarojha/diwakarojha.github.io/edit/master"
+  let rootPath="https://cdn.jsdelivr.net/gh/diwakarojha/diwakarojha.github.io@master"
   let chatBotDiv = document.createElement('div')
   chatBotDiv.innerHTML = content
 
