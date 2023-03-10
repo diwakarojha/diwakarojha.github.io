@@ -12,7 +12,7 @@ function loadBot() {
       <div class="chat_container">\
        <!-- Modal for rendering the charts, declare this if you want to render charts, \
           else you remove the modal -->\
-       <div id="modal1" class="modal">\
+       <div id="modal" class="modal">\
          <canvas id="modal-chart"></canvas>\
        </div>\
        <!--chatbot widget -->\
