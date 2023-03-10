@@ -9,7 +9,7 @@ function include(file) {
 
 /* include all the Chat components js file */
 
-let rootPath="https://diwakarojha.github.io"
+var rootPath="https://diwakarojha.github.io"
 
 include(rootPath+'/static/js/components/chat.js');
 include(rootPath+'/static/js/constants.js');

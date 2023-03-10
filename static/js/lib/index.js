@@ -8,7 +8,7 @@ function include(file) {
 
     document.getElementsByTagName('head').item(0).appendChild(script);
 }
-let rootPath="https://diwakarojha.github.io"
+var rootPath="https://diwakarojha.github.io"
 include(rootPath+'/static/js/lib/jquery.min.js');
 include(rootPath+'/static/js/lib/materialize.min.js');
 include(rootPath+'/static/js/lib/chart.min.js');
