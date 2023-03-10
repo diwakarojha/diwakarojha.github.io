@@ -11,8 +11,10 @@ function scrollToBottomOfResults() {
  * Set user response on the chat screen
  * @param {String} message user message
  */
+var rootPath="https://diwakarojha.github.io"
 function setUserResponse(message) {
-  const user_response = `<img class="userAvatar" src='./static/img/userAvatar.jpg'><p class="userMsg">${message} </p><div class="clearfix"></div>`;
+  // const user_response = `<img class="userAvatar" src='./static/img/userAvatar.jpg'><p class="userMsg">${message} </p><div class="clearfix"></div>`;
+  const user_response = `<img class="userAvatar" src=${rootPath}'/static/img/userAvatar.jpg'><p class="userMsg">${message} </p><div class="clearfix"></div>`;
   $(user_response).appendTo(".chats").show("slow");
 
   $(".usrInput").val("");
@@ -27,7 +29,8 @@ function setUserResponse(message) {
  *
  */
 function getBotResponse(text) {
-  botResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><span class="botMsg">${text}</span><div class="clearfix"></div>`;
+  // botResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><span class="botMsg">${text}</span><div class="clearfix"></div>`;
+  botResponse = `<img class="botAvatar" src=${rootPath}"/static/img/sara_avatar.png"/><span class="botMsg">${text}</span><div class="clearfix"></div>`;
   return botResponse;
 }
 
@@ -47,7 +50,8 @@ function setBotResponse(response) {
       // if there is no response from Rasa, send  fallback message to the user
       const fallbackMsg = "I am facing some issues, please try again later!!!";
 
-      const BotResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
+      // const BotResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
+      const BotResponse = `<img class="botAvatar" src=${rootPath}"/static/img/sara_avatar.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
 
       $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
       scrollToBottomOfResults();
@@ -97,7 +101,8 @@ function setBotResponse(response) {
             } else {
               // if no markdown formatting found, render the text as it is.
               if (!botResponse) {
-                botResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${response[i].text}</p><div class="clearfix"></div>`;
+                // botResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${response[i].text}</p><div class="clearfix"></div>`;
+                botResponse = `<img class="botAvatar" src=${rootPath}"./static/img/sara_avatar.png"/><p class="botMsg">${response[i].text}</p><div class="clearfix"></div>`;
               }
             }
             // append the bot response on to the chat screen
@@ -128,7 +133,7 @@ function setBotResponse(response) {
               // check if the attachment type is "video"
               const video_url = response[i].attachment.payload.src;
 
-              const BotResponse = `<div class="video-container"> <iframe src="${video_url}" frameborder="0" allowfullscreen></iframe> </div>`;
+              const BotResponse = `<div class="video-container"> <iframe src="${rootPath}+"${video_url}" frameborder="0" allowfullscreen></iframe> </div>`;
               $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
             }
           }
