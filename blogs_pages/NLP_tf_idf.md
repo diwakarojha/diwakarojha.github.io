@@ -37,4 +37,6 @@ But in above way, A collection of unigrams (what bag of words is) cannot capture
 
 so to capture word dependence we use N grams. where if n=2 , we use 2 word combination and find out vector representation.
 
+One might alternatively consider a collection of character n-grams, a representation resilient against misspellings and derivations.
+
 
